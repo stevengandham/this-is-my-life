@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steven Gandham — Software Engineer</title>
+  <meta name="description" content="Steven Gandham — software engineer building backend systems and AI-powered tools for the people who need them most.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-3d="on">
+
+<header class="site-nav">
+  <a class="brand anaglyph" href="#about">SG</a>
+  <nav class="nav-links" aria-label="Sections">
+    <a class="nav-link" href="#about">About Me</a>
+    <a class="nav-link" href="#resume">Resume</a>
+    <a class="nav-link" href="#projects">Projects</a>
+  </nav>
+  <button id="toggle-3d" class="toggle-3d" type="button" aria-label="Cycle 3D mode">🕶 3D: on</button>
+</header>
+
+<main>
+  <!-- ============ ABOUT ME ============ -->
+  <section id="about" class="section hero">
+    <p class="kicker">Software Engineer</p>
+    <h1 class="hero-name anaglyph-big">Steven Gandham</h1>
+    <p class="tagline">Software is a solved problem. The real question is: <em>what do we build next, and for whom?</em></p>
+    <div class="bio">
+      <p>I've spent 5 years building enterprise-grade backend systems touching 1.5M+ customers — Node.js, AWS serverless, event-driven architecture, agentic AI. I've lived in the stack. But what drives me isn't the technology. It's the people still waiting in a DMV line in 2026 wondering why nothing has changed.</p>
+      <p>Big tech doesn't need my help — they have armies. The underserved do: the small clinic that can't afford a CTO, the community college trying to democratize education, the local government running on software older than its employees. AI finally gives us the tools to solve these problems at scale.</p>
+      <p>I think of AI like a blank canvas. <strong>The technology isn't the art. What you choose to paint is.</strong> In an age where AI can execute, the scarcest skill is knowing what to build and why.</p>
+      <p>I'm looking for a team that believes the most important software hasn't been written yet — and that the people who need it most aren't on the Forbes list.</p>
+    </div>
+    <div class="hero-links">
+      <a class="btn" href="https://github.com/stevengandham" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/steven-s-gandham" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="mailto:stevengandham@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <!-- ============ RESUME ============ -->
+  <section id="resume" class="section">
+    <h2 class="section-title anaglyph">Resume</h2>
+    <a class="btn btn-accent" href="assets/Steven-Gandham-Resume-2025.pdf" download>Download PDF ⤓</a>
+
+    <h3 class="subhead">Experience</h3>
+    <ol class="timeline">
+      <li class="entry">
+        <div class="entry-head">
+          <h4>Software Engineer II · <span class="org">Realtor.com</span></h4>
+          <p class="dates">Jul 2021 – Present</p>
+        </div>
+        <ul>
+          <li>Resolved complex processing failures, saving over $300,000 in third-party billing.</li>
+          <li>Migrated a 15-year-old legacy .NET service to a Node.js 20 framework.</li>
+          <li>Developed and enhanced 7+ enterprise backend APIs integrating diverse databases and external service pipelines.</li>
+          <li>Built comprehensive Splunk dashboards, reports, and alerts for high-impact services.</li>
+          <li>Implemented Auth0 and SSO identity for user sign-up and login.</li>
+          <li>Authored service architecture documentation — presentations and one-pagers on features and company impact.</li>
+          <li>Mentored a new-grad hire and summer interns.</li>
+        </ul>
+      </li>
+      <li class="entry">
+        <div class="entry-head">
+          <h4>Web Development Intern · <span class="org">Scorpion.co</span></h4>
+          <p class="dates">Jul – Sep 2019</p>
+        </div>
+        <ul>
+          <li>Built a tool converting Word HTML to Scorpion-platform HTML, boosting efficiency 280%.</li>
+          <li>Collaborated on a Chrome extension converting selected DOM elements to properly formatted HTML.</li>
+        </ul>
+      </li>
+      <li class="entry">
+        <div class="entry-head">
+          <h4>Engineering Intern · <span class="org">Realtor.com</span></h4>
+          <p class="dates">Jul – Sep 2018</p>
+        </div>
+        <ul>
+          <li>Audio-to-text transcription with AWS Lambda, Transcribe, Comprehend, and S3.</li>
+          <li>Wrote Node.js algorithms and Lambda functions for data analysis.</li>
+        </ul>
+      </li>
+      <li class="entry">
+        <div class="entry-head">
+          <h4>Application Development Intern · <span class="org">Realtor.com</span></h4>
+          <p class="dates">Jun – Aug 2017</p>
+        </div>
+        <ul>
+          <li>Built an AWS proof of concept spanning S3, EC2, Firehose, API Gateway, CloudWatch, Lambda, VPC, Data Pipeline, and SNS.</li>
+        </ul>
+      </li>
+      <li class="entry">
+        <div class="entry-head">
+          <h4>LiDAR Navigation Programmer Lead · <span class="org">TEECOM SCOUT Autonomous Drone</span></h4>
+          <p class="dates">Cal Poly</p>
+        </div>
+        <ul>
+          <li>Interpreted RPLidar A3M1 360° scanner data for doorway/window/hallway detection and 2D room mapping.</li>
+          <li>Developed Python drone-navigation code accounting for flight stability.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3 class="subhead">Skills</h3>
+    <dl class="skills">
+      <div class="skill-group"><dt>Languages</dt><dd><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">C</span><span class="tag">Java</span><span class="tag">Bash/Zsh</span></dd></div>
+      <div class="skill-group"><dt>Backend &amp; Event-Driven</dt><dd><span class="tag">Node.js</span><span class="tag">REST APIs</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">MS SQL</span><span class="tag">Kafka</span><span class="tag">SNS/SQS</span><span class="tag">Pub/Sub</span></dd></div>
+      <div class="skill-group"><dt>AWS Serverless</dt><dd><span class="tag">Lambda</span><span class="tag">Step Functions</span><span class="tag">S3</span><span class="tag">API Gateway</span><span class="tag">CloudWatch</span></dd></div>
+      <div class="skill-group"><dt>AI &amp; Orchestration</dt><dd><span class="tag">Claude</span><span class="tag">Devin</span><span class="tag">Agentic workflows</span><span class="tag">Autonomous system design</span></dd></div>
+      <div class="skill-group"><dt>CI/CD &amp; Observability</dt><dd><span class="tag">Jenkins</span><span class="tag">Helm</span><span class="tag">ArgoCD</span><span class="tag">CircleCI</span><span class="tag">Docker</span><span class="tag">Splunk</span><span class="tag">New Relic</span></dd></div>
+    </dl>
+
+    <h3 class="subhead">Education</h3>
+    <div class="entry">
+      <div class="entry-head">
+        <h4>B.S. Computer Engineering · <span class="org">Cal Poly San Luis Obispo</span></h4>
+        <p class="dates">2016 – 2020</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS (placeholders — wire real links later) ============ -->
+  <section id="projects" class="section">
+    <h2 class="section-title anaglyph">Projects</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Waypoint</h3>
+        <p>[TODO: one-sentence description of Waypoint]</p>
+        <p class="card-tags"><span class="tag">JavaScript</span><span class="tag">[TODO]</span></p>
+        <a class="btn btn-accent" href="#" target="_blank" rel="noopener">View Live ↗ <!-- TODO: live URL --></a>
+      </article>
+      <article class="card">
+        <h3>Grounded</h3>
+        <p>[TODO: one-sentence description of Grounded]</p>
+        <p class="card-tags"><span class="tag">[TODO]</span></p>
+        <a class="btn btn-accent" href="#" target="_blank" rel="noopener">View Live ↗ <!-- TODO: live URL --></a>
+      </article>
+      <article class="card">
+        <h3>[TODO: Project name]</h3>
+        <p>[TODO: description — duplicate this card for more projects]</p>
+        <p class="card-tags"><span class="tag">[TODO]</span></p>
+        <a class="btn btn-accent" href="#" target="_blank" rel="noopener">View Live ↗</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Steven Gandham · Built by hand, no frameworks · <span class="anaglyph">Best enjoyed with red/cyan glasses</span> 🕶</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
