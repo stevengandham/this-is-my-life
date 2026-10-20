@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stuff I Use — Steven Gandham</title>
+  <meta name="description" content="Products Steven Gandham bought with his own money, used, and reviewed in his own words. As an Amazon Associate, he earns from qualifying purchases.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* ---------- /stuff-i-use page ---------- */
+    .amz-wrap { max-width: 42rem; }
+    .amz-hero { text-align: center; padding-top: 4rem; }
+    .amz-avatar {
+      width: 84px; height: 84px; margin: 0 auto 1rem; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.7rem; color: var(--ink);
+      border: 2px solid #2c2c33;
+      box-shadow: calc(var(--d) * -4px) 0 0 -1px var(--red), calc(var(--d) * 4px) 0 0 -1px var(--cyan);
+    }
+    .amz-name { font-size: clamp(1.9rem, 6vw, 2.8rem); margin: 0.2rem 0 0.4rem; line-height: 1.1; }
+    .amz-sub { color: var(--muted); margin: 0 auto; max-width: 32rem; }
+    .amz-sub strong { color: var(--ink); }
+
+    .disclosure {
+      border: 1px solid var(--yellow); border-radius: 10px;
+      padding: 0.9rem 1.1rem; margin: 1.75rem 0 1rem;
+      font-size: 0.92rem; color: var(--ink); text-align: left;
+    }
+    .disclosure strong { color: var(--yellow); }
+
+    .rules { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; margin: 1rem 0 0; }
+    .rule-no { color: var(--muted); border-style: dashed; }
+
+    .cat-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 2.25rem 0 0.5rem; }
+    .cat-nav a {
+      color: var(--ink); text-decoration: none; font-size: 0.9rem;
+      border: 1px solid #3a3a41; border-radius: 999px; padding: 0.3rem 0.85rem;
+    }
+    .cat-nav a:hover { border-color: var(--cyan); }
+
+    .pick-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+    .pick {
+      display: flex; gap: 1rem; text-align: left;
+      border: 1px solid #2c2c33; border-radius: 12px; padding: 1rem;
+      box-shadow: calc(var(--d) * -4px) 0 0 -1px var(--red), calc(var(--d) * 4px) 0 0 -1px var(--cyan);
+      transition: transform 120ms ease;
+    }
+    .pick:hover { transform: translateY(-3px); }
+    .pick-photo {
+      flex: 0 0 92px; width: 92px; height: 92px; border-radius: 8px;
+      border: 1px dashed #3a3a41; display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: 0.72rem; text-align: center; padding: 0.4rem;
+      /* Replace this box with Steven's OWN photo of the product.
+         Do not hotlink Amazon product images — Associates rules only
+         allow images via SiteStripe / Product Advertising API. */
+    }
+    .pick-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.35rem; }
+    .pick-head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+    .pick-head h3 { margin: 0; font-size: 1.05rem; }
+    .pick-cat { color: var(--cyan); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .pick-review { margin: 0; color: var(--ink); font-size: 0.95rem; }
+    .pick-review::before { content: "“"; color: var(--yellow); }
+    .pick-review::after  { content: "”"; color: var(--yellow); }
+    .pick-meta { margin: 0; color: var(--muted); font-size: 0.82rem; }
+    .pick .btn-accent { margin-top: auto; align-self: flex-start; font-size: 0.9rem; }
+
+    .how { margin-top: 3rem; text-align: left; }
+    .how ol { padding-left: 1.2rem; }
+    .how li { margin: 0.4rem 0; }
+    .updated { color: var(--muted); font-size: 0.85rem; text-align: center; margin-top: 2.5rem; }
+    @media (max-width: 480px) {
+      .pick { flex-direction: column; }
+      .pick-photo { flex-basis: auto; width: 100%; height: 110px; }
+    }
+  </style>
+</head>
+<body data-3d="on">
+
+<header class="site-nav">
+  <a class="brand anaglyph" href="/">SG</a>
+  <nav class="nav-links" aria-label="Sections">
+    <a class="nav-link" href="/#about">About Me</a>
+    <a class="nav-link" href="/#resume">Resume</a>
+    <a class="nav-link" href="/#projects">Projects</a>
+    <a class="nav-link active" href="/stuff-i-use">Stuff I Use</a>
+  </nav>
+  <button id="toggle-3d" class="toggle-3d" type="button" aria-label="Cycle 3D mode">🕶 3D: on</button>
+</header>
+
+<main class="amz-wrap">
+
+  <section class="section amz-hero">
+    <div class="amz-avatar anaglyph-big" aria-hidden="true">SG</div>
+    <p class="kicker">Steven Gandham · Things I Actually Use</p>
+    <h1 class="amz-name anaglyph-big">Stuff I Use &amp; Recommend</h1>
+    <p class="amz-sub">Every product on this page is one <strong>I bought with my own money, used, and reviewed in my own words.</strong> Nothing sponsored. Nothing I haven't touched. If I wouldn't buy it again, it doesn't get listed.</p>
+
+    <!-- Required Amazon Associates disclosure — must stay visible, near the top -->
+    <div class="disclosure" role="note">
+      <strong>Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases. If you buy through a link on this page, I may earn a commission — at no extra cost to you. Prices and availability change; the price on Amazon when you check out is the one that counts.
+    </div>
+
+    <div class="rules" aria-label="My listing rules">
+      <span class="tag">✓ Bought it myself</span>
+      <span class="tag">✓ Used it</span>
+      <span class="tag">✓ Reviewed in my own words</span>
+      <span class="tag rule-no">✕ No sponsored picks</span>
+    </div>
+
+    <nav class="cat-nav" aria-label="Categories">
+      <a href="#home-sleep">Home &amp; Sleep</a>
+      <a href="#fun">Fun &amp; Gifts</a>
+      <a href="#kitchen">Kitchen &amp; Drink</a>
+    </nav>
+  </section>
+
+  <!-- ============================================================
+       HOW TO ADD A PRODUCT — Steven only:
+       1. Copy one <article class="pick"> block below.
+       2. Replace the photo box with YOUR photo of the product.
+       3. Write the review yourself — 1–2 honest sentences, including
+          any downside. Never paste Amazon's description.
+       4. Paste your Associates link (it must contain your tag,
+          e.g. ?tag=YOURTAG-20) over the href="#TODO" placeholder.
+       5. Only add an item AFTER your review of it is live on Amazon.
+       Do NOT publish a block with any TODO left in it.
+       ============================================================ -->
+
+  <section id="home-sleep" class="section" style="padding-top:2rem;">
+    <h2 class="section-title anaglyph">Home &amp; Sleep</h2>
+    <div class="pick-list">
+      <article class="pick">
+        <div class="pick-photo">My photo<br>coming soon</div>
+        <div class="pick-body">
+          <div class="pick-head"><h3>Osteo Cervical Pillow for Neck Pain Relief</h3><span class="pick-cat">Home &amp; Sleep</span></div>
+          <p class="pick-review"><strong>Got rid of my neck and shoulder pain/stiffness</strong> — Initially, I didn't buy it that a pillow would solve all my neck and back problems.</p>
+          <p class="pick-meta">My rating: ★★★★★ · Reviewed Nov 2024 · <a href="https://www.amazon.com/review/RQTXEL19QLRBO" target="_blank" rel="noopener">Read my full review on Amazon</a></p>
+          <a class="btn btn-accent" href="https://www.amazon.com/dp/B09964WTF5?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow">View on Amazon ↗</a>
+        </div>
+      </article>
+      <article class="pick">
+        <div class="pick-photo">My photo<br>coming soon</div>
+        <div class="pick-body">
+          <div class="pick-head"><h3>BGment Blackout Curtains</h3><span class="pick-cat">Home &amp; Sleep</span></div>
+          <p class="pick-review"><strong>Provide Maximal Sleep Potential with Minimal Heat</strong> — My room faces east, so every morning my room would get really hot.</p>
+          <p class="pick-meta">My rating: ★★★★★ · Reviewed Nov 2024 · <a href="https://www.amazon.com/review/R8FQVSR2LO8BY" target="_blank" rel="noopener">Read my full review on Amazon</a></p>
+          <a class="btn btn-accent" href="https://www.amazon.com/dp/B07D6HCZTY?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow">View on Amazon ↗</a>
+        </div>
+      </article>
+      <article class="pick">
+        <div class="pick-photo">My photo<br>coming soon</div>
+        <div class="pick-body">
+          <div class="pick-head"><h3>Twira 90L Large Laundry Basket</h3><span class="pick-cat">Home &amp; Sleep</span></div>
+          <p class="pick-review"><strong>Slim and Quick Laundry Basket</strong> — I needed a tall basket to fit in the corner of my room and this baby does the trick just right.</p>
+          <p class="pick-meta">My rating: ★★★★★ · Reviewed Nov 2024 · <a href="https://www.amazon.com/review/R4EJDDNXJPRMD" target="_blank" rel="noopener">Read my full review on Amazon</a></p>
+          <a class="btn btn-accent" href="https://www.amazon.com/dp/B0BN85SJZW?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow">View on Amazon ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="fun" class="section" style="padding-top:1rem;">
+    <h2 class="section-title anaglyph">Fun &amp; Gifts</h2>
+    <div class="pick-list">
+      <article class="pick">
+        <div class="pick-photo">My photo<br>coming soon</div>
+        <div class="pick-body">
+          <div class="pick-head"><h3>CROWN ME Disc Golf Set — Disc Golf Starter Set</h3><span class="pick-cat">Fun &amp; Gifts</span></div>
+          <p class="pick-review"><strong>Great starter set for the family</strong> — I've recently convinced my family to go disc golfing with me and wanted to get discs for them to play with without committing to nice discs for them.</p>
+          <p class="pick-meta">My rating: ★★★★★ · Reviewed Nov 2024 · <a href="https://www.amazon.com/review/R16XL7L339DKON" target="_blank" rel="noopener">Read my full review on Amazon</a></p>
+          <a class="btn btn-accent" href="https://www.amazon.com/dp/B086GGH5W5?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow">View on Amazon ↗</a>
+        </div>
+      </article>
+      <article class="pick">
+        <div class="pick-photo">My photo<br>coming soon</div>
+        <div class="pick-body">
+          <div class="pick-head"><h3>Colorado Opoly</h3><span class="pick-cat">Fun &amp; Gifts</span></div>
+          <p class="pick-review"><strong>Incredibly Niche Christmas Present for a Coloradan</strong> — I bought this as a Christmas gag gift for a Coloradan friend by extension. IT WAS SO WORTH IT.</p>
+          <p class="pick-meta">My rating: ★★★★★ · Reviewed Nov 2024 · <a href="https://www.amazon.com/review/R18XFHLW0N4VSX" target="_blank" rel="noopener">Read my full review on Amazon</a></p>
+          <a class="btn btn-accent" href="https://www.amazon.com/dp/B0749CJH8T?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow">View on Amazon ↗</a>
+        </div>
+      </article>
+      <article class="pick">
+        <div class="pick-photo">My photo<br>coming soon</div>
+        <div class="pick-body">
+          <div class="pick-head"><h3>Spooktacular Creations Men's Oktoberfest Costume Set</h3><span class="pick-cat">Fun &amp; Gifts</span></div>
+          <p class="pick-review"><strong>Great Oktoberfest costume</strong> — It was hilarious to find and take a picture with 4 other guys wearing the same fit at an Oktoberfest Biergarten celebration I went to. Well worth the money if you need a quick costume for any upcoming events.</p>
+          <p class="pick-meta">My rating: ★★★★★ · Reviewed Nov 2024 · <a href="https://www.amazon.com/review/R2U7L683QH7766" target="_blank" rel="noopener">Read my full review on Amazon</a></p>
+          <a class="btn btn-accent" href="https://www.amazon.com/dp/B07H47PPB7?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow">View on Amazon ↗</a>
+        </div>
+      </article>
+      <article class="pick">
+        <div class="pick-photo">My photo<br>coming soon</div>
+        <div class="pick-body">
+          <div class="pick-head"><h3>Pinlangdou Dill Pickle Gift</h3><span class="pick-cat">Fun &amp; Gifts</span></div>
+          <p class="pick-review"><strong>Great Christmas Present for Pickle Lovers</strong> — I bought this for my pickle loving friend. The scream of absolute joy when they figured out what they got! Such a neat and fun idea!</p>
+          <p class="pick-meta">My rating: ★★★★★ · Reviewed Nov 2024 · <a href="https://www.amazon.com/review/R3EJE54HH95S3L" target="_blank" rel="noopener">Read my full review on Amazon</a></p>
+          <a class="btn btn-accent" href="https://www.amazon.com/dp/B0C9GKHXCS?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow">View on Amazon ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="kitchen" class="section" style="padding-top:1rem;">
+    <h2 class="section-title anaglyph">Kitchen &amp; Drink</h2>
+    <div class="pick-list">
+      <article class="pick">
+        <div class="pick-photo">My photo<br>coming soon</div>
+        <div class="pick-body">
+          <div class="pick-head"><h3>ThermoFlask Double Stainless Steel Insulated Water Bottle</h3><span class="pick-cat">Kitchen &amp; Drink</span></div>
+          <p class="pick-review"><strong>Highly Recommend. Better than a Hydro. Brands aren't everything.</strong> — Loved this!</p>
+          <p class="pick-meta">My rating: ★★★★★ · Reviewed Jul 2022 · <a href="https://www.amazon.com/review/RWCHI3777CKKB" target="_blank" rel="noopener">Read my full review on Amazon</a></p>
+          <a class="btn btn-accent" href="https://www.amazon.com/dp/B07F6QQCLN?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow">View on Amazon ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2 class="section-title anaglyph">How I Review</h2>
+    <ol>
+      <li><strong>I buy it first.</strong> No review units, no gifts, no sponsored placements.</li>
+      <li><strong>I use it for real.</strong> It has to survive my actual desk, kitchen, or workout — not a weekend test.</li>
+      <li><strong>I say the catch too.</strong> Every review names a downside or a limit. If I can't find one, I haven't used it long enough to list it.</li>
+    </ol>
+  </section>
+
+  <p class="updated">Last updated: October 20, 2026 · Every pick below is from a review I published on Amazon — tap “Read my full review” to see it.</p>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Steven Gandham · As an Amazon Associate, I earn from qualifying purchases · <a href="/">Back to home</a></p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
