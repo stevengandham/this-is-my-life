@@ -58,6 +58,11 @@
     .pick-photo-link { flex: 0 0 92px; width: 92px; height: 92px; border-radius: 8px; overflow: hidden; background: #fff; display: block; }
     .pick-photo-link img { width: 100%; height: 100%; object-fit: contain; display: block; border: 0; }
     @media (max-width: 480px) { .pick-photo-link { width: 100%; height: 160px; flex-basis: auto; } }
+
+    .pick-photos { flex: 0 0 92px; display: flex; flex-direction: column; gap: 6px; }
+    .pick-photos a { display: block; border-radius: 8px; overflow: hidden; }
+    .pick-photos img { width: 92px; height: 92px; object-fit: cover; display: block; border: 0; }
+    @media (max-width: 480px) { .pick-photos { flex-direction: row; flex-basis: auto; } .pick-photos img { width: 100%; height: 140px; } .pick-photos a { flex: 1; } }
     .pick-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.35rem; }
     .pick-head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
     .pick-head h3 { margin: 0; font-size: 1.05rem; }
@@ -143,7 +148,7 @@
         </div>
       </article>
       <article class="pick">
-        <a class="pick-photo-link" href="https://www.amazon.com/dp/B0BN85SJZW?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow"><img src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BN85SJZW&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=stevensugge0f-20" alt="Twira 90L Large Laundry Basket" loading="lazy"></a><img src="https://ir-na.amazon-adsystem.com/e/ir?t=stevensugge0f-20&l=am2&o=1&a=B0BN85SJZW" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;">
+        <div class="pick-photos"><a href="https://www.amazon.com/dp/B0BN85SJZW?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow" title="My photo, from my Amazon review"><img src="https://m.media-amazon.com/images/I/71BOedtA0CL._SY500_.jpg" alt="My Twira 90L laundry basket set up by my desk — photo from my Amazon review" loading="lazy"></a><a href="https://www.amazon.com/dp/B0BN85SJZW?tag=stevensugge0f-20" target="_blank" rel="noopener sponsored nofollow" title="My photo, from my Amazon review"><img src="https://m.media-amazon.com/images/I/71Y-g9aLddL._SY500_.jpg" alt="My Twira 90L laundry basket still folded in its packaging — photo from my Amazon review" loading="lazy"></a></div>
         <div class="pick-body">
           <div class="pick-head"><h3>Twira 90L Large Laundry Basket</h3><span class="pick-cat">Home &amp; Sleep</span></div>
           <p class="pick-review"><strong>Slim and Quick Laundry Basket</strong> — I needed a tall basket to fit in the corner of my room and this baby does the trick just right.</p>
