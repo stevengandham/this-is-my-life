@@ -51,7 +51,7 @@ main { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
 }
 .brand { font-weight: 800; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
 .nav-links { display: flex; gap: 1rem; flex: 1; }
-.nav-link { color: var(--muted); text-decoration: none; padding: 0.2rem 0.1rem; border-bottom: 2px solid transparent; }
+.nav-link { color: var(--muted); text-decoration: none; padding: 0.2rem 0.1rem; border-bottom: 2px solid transparent; transition: color 250ms ease, border-bottom-color 250ms ease; }
 .nav-link:hover { color: var(--ink); }
 .nav-link.active { color: var(--yellow); border-bottom-color: var(--yellow); }
 .toggle-3d {

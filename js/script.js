@@ -37,7 +37,7 @@
     });
   }, { rootMargin: "-40% 0px -55% 0px" });
 
-  ["about", "resume", "projects"].forEach(function (id) {
+  ["about", "resume", "projects", "stuff-i-use", "yelp-reviews"].forEach(function (id) {
     var el = document.getElementById(id);
     if (el) observer.observe(el);
   });
