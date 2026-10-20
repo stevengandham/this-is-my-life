@@ -48,6 +48,24 @@
       #stuff-i-use .pick-photos a { flex: 1; }
     }
   </style>
+  <style>
+    /* ---------- Yelp Reviews section (scoped) ---------- */
+    #yelp-reviews .yelp-sub { color: var(--muted); max-width: 42rem; }
+    #yelp-reviews .yelp-sub strong { color: var(--ink); }
+    #yelp-reviews .yelp-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; max-width: 46rem; }
+    #yelp-reviews .yelp-card { text-align: left; border: 1px solid #2c2c33; border-radius: 12px; padding: 1rem; box-shadow: calc(var(--d) * -4px) 0 0 -1px var(--red), calc(var(--d) * 4px) 0 0 -1px var(--cyan); transition: transform 120ms ease; }
+    #yelp-reviews .yelp-card:hover { transform: translateY(-3px); }
+    #yelp-reviews .yelp-head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+    #yelp-reviews .yelp-head h3 { margin: 0; font-size: 1.05rem; }
+    #yelp-reviews .yelp-loc { color: var(--cyan); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    #yelp-reviews .yelp-stars { margin: 0.25rem 0 0; color: var(--yellow); letter-spacing: 0.15em; }
+    #yelp-reviews .yelp-review { margin: 0.35rem 0 0; color: var(--ink); font-size: 0.95rem; }
+    #yelp-reviews .yelp-review::before { content: "\201C"; color: var(--yellow); }
+    #yelp-reviews .yelp-review::after { content: "\201D"; color: var(--yellow); }
+    #yelp-reviews .yelp-meta { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.82rem; }
+    #yelp-reviews .yelp-body .btn-accent { margin-top: 0.6rem; font-size: 0.9rem; display: inline-block; }
+    #yelp-reviews .yelp-all { margin-top: 1.5rem; }
+  </style>
 </head>
 <body data-3d="on">
 
@@ -58,6 +76,7 @@
     <a class="nav-link" href="#resume">Resume</a>
     <a class="nav-link" href="#projects">Projects</a>
     <a class="nav-link" href="#stuff-i-use">Stuff I Use</a>
+    <a class="nav-link" href="#yelp-reviews">Yelp Reviews</a>
   </nav>
   <button id="toggle-3d" class="toggle-3d" type="button" aria-label="Cycle 3D mode">🕶 3D: on</button>
 </header>
@@ -309,6 +328,60 @@
     </div>
 
     <p class="updated">Last updated: October 20, 2026 · Every pick above is from a review I published on Amazon — tap “Read my full review” to see it.</p>
+  </section>
+
+  <!-- ============ YELP REVIEWS ============ -->
+  <section id="yelp-reviews" class="section">
+    <h2 class="section-title anaglyph">Yelp Reviews</h2>
+    <p class="yelp-sub">Places I've eaten and visited, reviewed in my own words on Yelp — <strong>22 reviews</strong> so far. Here are my five most recent:</p>
+    <div class="yelp-list">
+      <article class="yelp-card">
+        <div class="yelp-body">
+          <div class="yelp-head"><h3>Hadley Fruit Orchards</h3><span class="yelp-loc">Cabazon, CA</span></div>
+          <p class="yelp-stars" role="img" aria-label="My rating: 5 out of 5 stars">★★★★★</p>
+          <p class="yelp-review">Following a poor example of an American breakfast at another establishment we had passed through earlier, we were looking for a sweet treat. A life saver and well known friend. Mr/Mrs Hadley themselves.</p>
+          <p class="yelp-meta">Reviewed Sep 7, 2026 · <a href="https://www.yelp.com/biz/hadley-fruit-orchards-cabazon-3?hrid=n610GIxBTnu-6gYVnr8NbQ" target="_blank" rel="noopener">Read my full review on Yelp</a></p>
+          <a class="btn btn-accent" href="https://www.yelp.com/biz/hadley-fruit-orchards-cabazon-3" target="_blank" rel="noopener">View on Yelp ↗</a>
+        </div>
+      </article>
+      <article class="yelp-card">
+        <div class="yelp-body">
+          <div class="yelp-head"><h3>Chick-fil-A</h3><span class="yelp-loc">Indio, CA</span></div>
+          <p class="yelp-stars" role="img" aria-label="My rating: 3 out of 5 stars">★★★☆☆</p>
+          <p class="yelp-review">Just came back to the states from a long trip to Mexico. The wait to the front took just about as long as it took to get over the border this morning.</p>
+          <p class="yelp-meta">Reviewed Sep 7, 2026 · <a href="https://www.yelp.com/biz/chick-fil-a-indio?hrid=FnpgayJp4b8GredjtMtDvw" target="_blank" rel="noopener">Read my full review on Yelp</a></p>
+          <a class="btn btn-accent" href="https://www.yelp.com/biz/chick-fil-a-indio" target="_blank" rel="noopener">View on Yelp ↗</a>
+        </div>
+      </article>
+      <article class="yelp-card">
+        <div class="yelp-body">
+          <div class="yelp-head"><h3>Tropical Smoothie Cafe</h3><span class="yelp-loc">Fountain Valley, CA</span></div>
+          <p class="yelp-stars" role="img" aria-label="My rating: 3 out of 5 stars">★★★☆☆</p>
+          <p class="yelp-review">I'm gonna honest with you, I've never lied to you before. Whenever I need a smoothie, do I think Jamba Juice? No I don't, I think of this spot. I think, I want a MASSIVE PORTION of fruit and protein, and I want it fast.</p>
+          <p class="yelp-meta">Reviewed Jun 7, 2026 · <a href="https://www.yelp.com/biz/tropical-smoothie-cafe-fountain-valley-2?hrid=4mq1Ah__qyhv0GV0CoHHrQ" target="_blank" rel="noopener">Read my full review on Yelp</a></p>
+          <a class="btn btn-accent" href="https://www.yelp.com/biz/tropical-smoothie-cafe-fountain-valley-2" target="_blank" rel="noopener">View on Yelp ↗</a>
+        </div>
+      </article>
+      <article class="yelp-card">
+        <div class="yelp-body">
+          <div class="yelp-head"><h3>Junmai Sushi Bar &amp; Grill</h3><span class="yelp-loc">Vista, CA</span></div>
+          <p class="yelp-stars" role="img" aria-label="My rating: 5 out of 5 stars">★★★★★</p>
+          <p class="yelp-review">Do you believe in God? Or a higher power Or a place Somewhere A Good Place (not sponsored or affiliated to NBC to any extent) Picture a place, where the best of the best would be, including yourself. You made it. It is a paradise.</p>
+          <p class="yelp-meta">Reviewed Jun 5, 2026 · <a href="https://www.yelp.com/biz/junmai-sushi-bar-and-grill-vista?hrid=X7d2RgpuwHzbUOWeXT99Xg" target="_blank" rel="noopener">Read my full review on Yelp</a></p>
+          <a class="btn btn-accent" href="https://www.yelp.com/biz/junmai-sushi-bar-and-grill-vista" target="_blank" rel="noopener">View on Yelp ↗</a>
+        </div>
+      </article>
+      <article class="yelp-card">
+        <div class="yelp-body">
+          <div class="yelp-head"><h3>Qahwetna Coffee</h3><span class="yelp-loc">Anaheim, CA</span></div>
+          <p class="yelp-stars" role="img" aria-label="My rating: 5 out of 5 stars">★★★★★</p>
+          <p class="yelp-review">Remas and Hodalis were a delightfully warm invitation to the Qahwah establishment. It was my first time at this place. I didn't know what was best here so I asked the golden question to get me out of the common pickle of option paralysis "what would…</p>
+          <p class="yelp-meta">Reviewed Apr 27, 2026 · <a href="https://www.yelp.com/biz/qahwetna-coffee-anaheim?hrid=UPnfBaI5wLj9uB7ec7fShg" target="_blank" rel="noopener">Read my full review on Yelp</a></p>
+          <a class="btn btn-accent" href="https://www.yelp.com/biz/qahwetna-coffee-anaheim" target="_blank" rel="noopener">View on Yelp ↗</a>
+        </div>
+      </article>
+    </div>
+    <p class="yelp-all"><a class="btn" href="https://www.yelp.com/user_details?userid=rUiv7Nj9Z63Rl_DhOv29pA" target="_blank" rel="noopener">See all my reviews on Yelp ↗</a></p>
   </section>
 </main>
 
